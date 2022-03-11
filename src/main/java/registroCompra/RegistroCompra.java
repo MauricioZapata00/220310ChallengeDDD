@@ -1,6 +1,7 @@
 package registroCompra;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import registroCompra.events.RegistroAgregado;
 import registroCompra.values.RegistroCompraId;
 
 import java.util.ArrayList;
@@ -13,5 +14,6 @@ public class RegistroCompra extends AggregateEvent<RegistroCompraId> {
     public RegistroCompra(RegistroCompraId entityId, ArrayList<Producto> productos,
                           ArrayList<Orden> ordenes) {
         super(entityId);
+        appendChange(new RegistroAgregado(productos, ordenes)).apply();
     }
 }

@@ -1,6 +1,7 @@
 package compra;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import compra.events.CompraHecha;
 import compra.values.CompraId;
 import registroCompra.values.RegistroCompraId;
 
@@ -12,5 +13,6 @@ public class Compra extends AggregateEvent<CompraId> {
     protected RegistroCompraId registroCompraId;
     public Compra(CompraId entityId, AnuncioRelacionado anuncioRelacionado) {
         super(entityId);
+        appendChange(new CompraHecha(anuncioRelacionado)).apply();
     }
 }
