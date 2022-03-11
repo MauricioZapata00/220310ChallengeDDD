@@ -8,4 +8,5 @@ public class Nombre extends Entity<NombreId> {
     public Nombre(NombreId entityId) {
         super(entityId);
     }
+
 }

@@ -1,10 +1,6 @@
 
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-U
-%src/main/java/pago/values/PagoId.java,2/9/299ef3a99db9971f5de7833ea6eb6cdf0d503ade
-V
-&src/main/java/pago/values/Factura.java,f/e/fe4652b604bc7056cb46377f2c6dc7fdfcfc8198
 Y
 )src/main/java/cuenta/values/CuentaId.java,1/4/14faa7cb6b9284e62504d56ab8aecfe648f6921e
 W
@@ -53,8 +49,6 @@ e
 5src/main/java/pago/events/TransferenciaRealizada.java,3/b/3bec32ad559dac9799214970dcb27c0d964c0a7f
 _
 /src/main/java/cuenta/events/CorreoCambiado.java,d/8/d874dcb343a62f8becfb42f48fb1893689cfbc8d
-_
-/src/main/java/cuenta/events/NombreCambiado.java,d/e/dede0a7baecc84c0df34217950788cdb75815831
 b
 2src/main/java/cuenta/events/DireccionCambiada.java,5/9/59f9cd4d2af1546397eaab348e34ff083b0b7c98
 e
