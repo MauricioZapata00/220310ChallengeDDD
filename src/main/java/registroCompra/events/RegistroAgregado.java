@@ -18,10 +18,10 @@ public class RegistroAgregado extends DomainEvent {
     }
 
     public ArrayList<Producto> getProductos() {
-        return productos;
+        return this.productos;
     }
 
     public ArrayList<Orden> getOrdenes() {
-        return ordenes;
+        return this.ordenes;
     }
 }

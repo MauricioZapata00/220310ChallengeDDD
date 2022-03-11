@@ -12,9 +12,15 @@ public class Pago extends AggregateEvent<PagoId> {
 
     protected Factura factura;
     protected Transferencia transferencia;
+
     public Pago(PagoId entityId, Factura factura, Transferencia transferencia) {
         super(entityId);
         appendChange(new TransferenciaRealizada(factura, transferencia)).apply();
+    }
+
+    private Pago(PagoId entityId){
+        super(entityId);
+        subscribe(new PagoChange(this));
     }
 
     public String verFactura(){

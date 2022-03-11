@@ -1,11 +1,19 @@
 package registroCompra.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
+import registroCompra.Producto;
+
+import java.util.ArrayList;
 
 public class ProductoAgregado extends DomainEvent {
 
-    public ProductoAgregado() {
+    private Producto producto;
+    public ProductoAgregado(Producto producto) {
         super("baseDeDatos.registroCompra.productoAgregado");
-        //TODO: Make the process to add product
+        this.producto = producto;
+    }
+
+    public Producto getProducto() {
+        return this.producto;
     }
 }

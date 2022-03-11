@@ -21,6 +21,11 @@ public class Compra extends AggregateEvent<CompraId> {
         appendChange(new CompraHecha(anuncioRelacionado)).apply();
     }
 
+    private Compra(CompraId entityId){
+        super(entityId);
+        subscribe(new CompraChange(this));
+    }
+
     public void obtenerOferta(Oferta oferta){
         Objects.requireNonNull(oferta);
         appendChange(new OfertaObtenida(oferta)).apply();

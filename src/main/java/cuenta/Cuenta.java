@@ -26,6 +26,11 @@ public class Cuenta extends AggregateEvent<CuentaId> {
         appendChange(new CuentaCreada(nombre, direccion, email)).apply();
     }
 
+    private Cuenta(CuentaId entityId){
+        super(entityId);
+        subscribe(new CuentaChange(this));
+    }
+
     public void cambiarNombre(Nombre nombre){
         Objects.requireNonNull(nombre);
         appendChange(new NombreCambiado(nombre)).apply();
