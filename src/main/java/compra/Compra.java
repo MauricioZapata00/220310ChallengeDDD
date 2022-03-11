@@ -1,12 +1,14 @@
 package compra;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import compra.events.AnuncioCambiado;
 import compra.events.CompraHecha;
 import compra.events.OfertaObtenida;
 import compra.values.CompraId;
 import registroCompra.values.RegistroCompraId;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Compra extends AggregateEvent<CompraId> {
@@ -24,6 +26,12 @@ public class Compra extends AggregateEvent<CompraId> {
     private Compra(CompraId entityId){
         super(entityId);
         subscribe(new CompraChange(this));
+    }
+
+    public static Compra from(CompraId entityId, List<DomainEvent> events){
+        Compra compra = new Compra(entityId);
+        events.forEach(compra::applyEvent);
+        return compra;
     }
 
     public void obtenerOferta(Oferta oferta){

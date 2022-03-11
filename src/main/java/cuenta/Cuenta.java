@@ -1,6 +1,7 @@
 package cuenta;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import compra.values.CompraId;
 import cuenta.events.*;
 import cuenta.values.CuentaId;
@@ -9,6 +10,7 @@ import cuenta.values.PagoId;
 
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -29,6 +31,12 @@ public class Cuenta extends AggregateEvent<CuentaId> {
     private Cuenta(CuentaId entityId){
         super(entityId);
         subscribe(new CuentaChange(this));
+    }
+
+    public static Cuenta from(CuentaId entityId, List<DomainEvent> events){
+        Cuenta cuenta = new Cuenta(entityId);
+        events.forEach(cuenta::applyEvent);
+        return cuenta;
     }
 
     public void cambiarNombre(Nombre nombre){

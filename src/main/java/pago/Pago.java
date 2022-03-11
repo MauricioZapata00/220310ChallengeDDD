@@ -1,11 +1,13 @@
 package pago;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import pago.events.TransferenciaRealizada;
 import pago.values.Factura;
 import pago.values.PagoId;
 import pago.values.Transferencia;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Pago extends AggregateEvent<PagoId> {
@@ -21,6 +23,12 @@ public class Pago extends AggregateEvent<PagoId> {
     private Pago(PagoId entityId){
         super(entityId);
         subscribe(new PagoChange(this));
+    }
+
+    public static Pago from(PagoId entityId, List<DomainEvent> events){
+        Pago pago = new Pago(entityId);
+        events.forEach(pago::applyEvent);
+        return pago;
     }
 
     public String verFactura(){

@@ -1,14 +1,6 @@
 
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-Y
-)src/main/java/cuenta/values/CuentaId.java,1/4/14faa7cb6b9284e62504d56ab8aecfe648f6921e
-W
-'src/main/java/cuenta/values/PagoId.java,6/e/6ecbcc4a08eb5d8276f93a404f073d15c828d764
-Y
-)src/main/java/compra/values/CuentaId.java,7/9/795be5fb9dd69683a116d5c52aca98dbc213d236
-Y
-)src/main/java/compra/values/CompraId.java,a/1/a163ad2f42462970f1dc66793bde30061907335e
 ]
 -src/main/java/cuenta/values/MetodoDePago.java,6/f/6f6368f57de345e900d7b2299a6944f66d5a8682
 X
@@ -19,8 +11,6 @@ Z
 *src/main/java/compra/values/Promocion.java,1/f/1f2374a54713829aaf13ba434ab2dc00d37c0b5c
 [
 +src/main/java/compra/values/Publicidad.java,0/0/00812249c8f7b8353ba4817d3ce1b154d5b1ea84
-a
-1src/main/java/registroCompra/values/CompraId.java,a/a/aad933593d16fb10e7e616e65b05b2b709b47b91
 ^
 .src/main/java/registroCompra/values/Costo.java,b/6/b63e3b9d94f50ba06e2e24b5597c0fbc84d79111
 \
@@ -37,8 +27,6 @@ _
 /src/main/java/registroCompra/values/Imagen.java,4/2/427c7a7ad0302685b5ad088f436247a15fac5214
 _
 /src/main/java/registroCompra/values/Precio.java,4/a/4a73037ac1d4e63fb9571d1b65871b1c5612482f
-i
-9src/main/java/registroCompra/values/RegistroCompraId.java,d/1/d1de18021d3c056c754f822e70f190f5bce1722c
 f
 6src/main/java/registroCompra/values/FechaDespacho.java,7/b/7b5b4afc59a810923085a3f49d2234f02310eb3e
 a
