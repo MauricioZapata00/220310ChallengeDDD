@@ -31,13 +31,15 @@ public class Pago extends AggregateEvent<PagoId> {
         return pago;
     }
 
-    public String verFactura(){
+    public String verFactura(PagoId entityId){
+        Objects.requireNonNull(entityId);
         Objects.requireNonNull(this.factura, "No se ha realizado transferencia, por " +
                 "tanto no hay factura");
         return this.factura.toString();
     }
 
-    public String verTransferencia(){
+    public String verTransferencia(PagoId entityId){
+        Objects.requireNonNull(entityId);
         Objects.requireNonNull(this.transferencia, "No se ha realizado transferencia");
         return this.transferencia.toString();
     }
