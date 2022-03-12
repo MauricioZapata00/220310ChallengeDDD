@@ -15,13 +15,13 @@ public class CuentaChange extends EventChange {
             cuenta.compraIds = new ArrayList<>();
         });
         apply((NombreCambiado event) -> {
-            event.setNombre(cuenta.nombre);
+            cuenta.nombre = event.getNombre();
         });
         apply((DireccionCambiada event) -> {
-            event.setDireccion(cuenta.direccion);
+            cuenta.direccion = event.getDireccion();
         });
         apply((CorreoCambiado event) -> {
-            event.setEmail(cuenta.email);
+            cuenta.email = event.getEmail();
         });
         apply((MetodoDePagoAsociado event) -> {
             event.setMetodoDePago(cuenta.metodoDePago);

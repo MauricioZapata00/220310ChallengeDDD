@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.DomainEvent;
 import registroCompra.events.OrdenAgregada;
 import registroCompra.events.ProductoAgregado;
 import registroCompra.events.RegistroAgregado;
-import registroCompra.values.RegistroCompraId;
+import registroCompra.values.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +16,7 @@ public class RegistroCompra extends AggregateEvent<RegistroCompraId> {
     protected ArrayList<Producto> productos;
     protected ArrayList<Orden> ordenes;
     protected CostoInventario costoInventario;
+    protected CompraId compraId;
 
     public RegistroCompra(RegistroCompraId entityId, ArrayList<Producto> productos,
                           ArrayList<Orden> ordenes) {
@@ -34,13 +35,37 @@ public class RegistroCompra extends AggregateEvent<RegistroCompraId> {
         return registroCompra;
     }
 
-    public void agregarProducto(Producto producto){
-        Objects.requireNonNull(producto);
-        appendChange(new ProductoAgregado(producto)).apply();
+    public void agregarProducto(ProductoId entityId, Descripcion descripcion, Precio precio,
+                                Imagen imagen){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(descripcion);
+        Objects.requireNonNull(precio);
+        Objects.requireNonNull(imagen);
+        appendChange(new ProductoAgregado(entityId, descripcion, precio, imagen)).apply();
     }
 
-    public void agregarOrden(Orden orden){
-        Objects.requireNonNull(orden);
-        appendChange(new OrdenAgregada(orden)).apply();
+    public void agregarOrden(OrdenId entityId, Empresa empresa, FechaDespacho fechaDespacho,
+                             Entrega entrega){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(empresa);
+        Objects.requireNonNull(fechaDespacho);
+        Objects.requireNonNull(entrega);
+        appendChange(new OrdenAgregada(entityId, empresa, fechaDespacho, entrega)).apply();
+    }
+
+    public ArrayList<Producto> getProductos() {
+        return this.productos;
+    }
+
+    public ArrayList<Orden> getOrdenes() {
+        return this.ordenes;
+    }
+
+    public CostoInventario getCostoInventario() {
+        return this.costoInventario;
+    }
+
+    public CompraId getCompraId() {
+        return this.compraId;
     }
 }

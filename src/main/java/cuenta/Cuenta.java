@@ -4,9 +4,7 @@ import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import compra.values.CompraId;
 import cuenta.events.*;
-import cuenta.values.CuentaId;
-import cuenta.values.MetodoDePago;
-import cuenta.values.PagoId;
+import cuenta.values.*;
 
 
 import java.util.ArrayList;
@@ -39,19 +37,22 @@ public class Cuenta extends AggregateEvent<CuentaId> {
         return cuenta;
     }
 
-    public void cambiarNombre(Nombre nombre){
+    public void cambiarNombre(NombreId nombreId, String nombre){
+        Objects.requireNonNull(nombreId);
         Objects.requireNonNull(nombre);
-        appendChange(new NombreCambiado(nombre)).apply();
+        appendChange(new NombreCambiado(nombreId, nombre)).apply();
     }
 
-    public void cambiarDireccion(Direccion direccion){
+    public void cambiarDireccion(DireccionId direccionId, String direccion){
+        Objects.requireNonNull(direccionId);
         Objects.requireNonNull(direccion);
-        appendChange(new DireccionCambiada(direccion)).apply();
+        appendChange(new DireccionCambiada(direccionId, direccion)).apply();
     }
 
-    public void cambiarCorreo(Email email){
+    public void cambiarCorreo(EmailId emailId, String email){
+        Objects.requireNonNull(emailId);
         Objects.requireNonNull(email);
-        appendChange(new CorreoCambiado(email)).apply();
+        appendChange(new CorreoCambiado(emailId, email)).apply();
     }
 
     public void asociarMetodoDePago(MetodoDePago metodoDePago){

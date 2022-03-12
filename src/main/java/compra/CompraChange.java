@@ -11,10 +11,10 @@ public class CompraChange extends EventChange {
             compra.anuncioRelacionado = event.getAnuncioRelacionado();
         });
         apply((AnuncioCambiado event) -> {
-            event.setAnuncioRelacionado(compra.anuncioRelacionado);
+            compra.anuncioRelacionado = event.getAnuncioRelacionado();
         });
         apply((OfertaObtenida event) -> {
-            event.setOferta(compra.oferta);
+            compra.oferta = event.getOferta();
         });
     }
 }

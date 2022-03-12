@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.DomainEvent;
 import compra.events.AnuncioCambiado;
 import compra.events.CompraHecha;
 import compra.events.OfertaObtenida;
-import compra.values.CompraId;
+import compra.values.*;
 import registroCompra.values.RegistroCompraId;
 
 import java.util.List;
@@ -34,14 +34,18 @@ public class Compra extends AggregateEvent<CompraId> {
         return compra;
     }
 
-    public void obtenerOferta(Oferta oferta){
-        Objects.requireNonNull(oferta);
-        appendChange(new OfertaObtenida(oferta)).apply();
+    public void obtenerOferta(OfertaId entityId, Descuento descuento, Promocion promocion){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(descuento);
+        Objects.requireNonNull(promocion);
+        appendChange(new OfertaObtenida(entityId, descuento, promocion)).apply();
     }
 
-    public void cambiarAnuncio(AnuncioRelacionado anuncioRelacionado){
-        Objects.requireNonNull(anuncioRelacionado);
-        appendChange(new AnuncioCambiado(anuncioRelacionado)).apply();
+    public void cambiarAnuncio(AnuncioId entityId, Publicidad publicidad, Cookies cookies){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(publicidad);
+        Objects.requireNonNull(cookies);
+        appendChange(new AnuncioCambiado(entityId, publicidad, cookies)).apply();
     }
 
     public Oferta getOferta() {
