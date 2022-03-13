@@ -37,10 +37,10 @@ public class Cuenta extends AggregateEvent<CuentaId> {
         return cuenta;
     }
 
-    public void cambiarNombre(NombreId nombreId, String nombre){
+    public void cambiarNombre(CuentaId entityId, NombreId nombreId, String nombre){
         Objects.requireNonNull(nombreId);
         Objects.requireNonNull(nombre);
-        appendChange(new NombreCambiado(nombreId, nombre)).apply();
+        appendChange(new NombreCambiado(entityId, nombreId, nombre)).apply();
     }
 
     public void cambiarDireccion(DireccionId direccionId, String direccion){

@@ -81,14 +81,10 @@ W
 0src/main/java/compra/events/AnuncioCambiado.java,7/4/742c9a5bdd611423b9d7df1d8810a585357576a5
 _
 /src/main/java/compra/events/OfertaObtenida.java,d/a/dadd5d03ec9f9c8962bf99ae11e3b64448a3ee54
-_
-/src/main/java/cuenta/events/NombreCambiado.java,d/e/dede0a7baecc84c0df34217950788cdb75815831
 b
 2src/main/java/cuenta/events/DireccionCambiada.java,5/9/59f9cd4d2af1546397eaab348e34ff083b0b7c98
 _
 /src/main/java/cuenta/events/CorreoCambiado.java,d/8/d874dcb343a62f8becfb42f48fb1893689cfbc8d
-V
-&src/main/java/cuenta/CuentaChange.java,6/1/610d8db7cb7bc5230269190fe595f80ad93c318a
 i
 9src/main/java/registroCompra/events/ProductoAgregado.java,7/1/71ae1911f5fb449249794a99975a845154b1991c
 a
@@ -107,8 +103,6 @@ f
 .src/main/java/compra/commands/CrearCompra.java,5/8/5824c8ae5ea23cfcbc4af50ef4deae69756fb0f5
 j
 :src/main/java/compra/commands/CrearAnuncioRelacionado.java,f/d/fd681e5ec021b5f94c08dbd2762be50a593b5617
-`
-0src/main/java/cuenta/commands/CambiarNombre.java,d/3/d34c2347f72888881bebf279f1547b5ab15c610a
 \
 ,src/main/java/compra/AnuncioRelacionado.java,3/8/38c7abb1ce1cf6621f553e396d4e74a674f3c29e
 `
@@ -127,8 +121,6 @@ f
 6src/main/java/registroCompra/events/OrdenAgregada.java,b/4/b442cdd9e743fbf9423da45f27f0edfb2cafb910
 \
 ,src/main/java/pago/values/Transferencia.java,5/6/564db37c7dd549da3a4d750a2fb65c72d7d962cb
-7
-pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 Z
 *src/main/java/pago/commands/CrearPago.java,9/8/987ba5a7068ae2ab1e09ff9c2c5646929f96ead7
 e
