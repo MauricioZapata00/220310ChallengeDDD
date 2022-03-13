@@ -47,4 +47,9 @@ public class PagoTest {
         Assert.assertEquals(factura, event.getFactura());
         Assert.assertEquals(transferencia, event.getTransferencia());
     }
+
+    @Test
+    public void verFactura(){
+
+    }
 }

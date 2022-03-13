@@ -1,0 +1,10 @@
+
+†
+java:S1319"iThe type of "productos" should be an interface such as "List" rather than the implementation "ArrayList".(Õóı¤8ÅºØş÷/
+‰
+java:S1319"gThe type of "ordenes" should be an interface such as "List" rather than the implementation "ArrayList".(œ«¢³üÿÿÿÿ8ÆºØş÷/
+
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(…‰ºŒ8—ßÙş÷/
+
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ŞŞİ»8˜ßÙş÷/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿ì„úÿÿÿÿ

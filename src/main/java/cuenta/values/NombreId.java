@@ -13,6 +13,6 @@ public class NombreId extends Identity {
     }
 
     public static NombreId of(Long id){
-        return null;
+        return new NombreId(id);
     }
 }

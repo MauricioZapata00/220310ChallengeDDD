@@ -14,7 +14,7 @@ public class Email extends Entity<EmailId> {
     public Email(EmailId entityId, String email) {
         super(entityId);
         Objects.requireNonNull(email);
-        if(this.email.isBlank()){
+        if(email.isBlank()){
             throw new IllegalArgumentException("Ingresa un correo que no sea vacío");
         }
         //Check if the email is valid
