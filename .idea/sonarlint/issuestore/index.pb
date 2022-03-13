@@ -3,8 +3,6 @@
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 a
 1src/main/java/pago/events/TransferenciaVista.java,0/e/0ec54117e4dce0f8b679f697c5472c944a665ab4
-e
-5src/main/java/pago/events/TransferenciaRealizada.java,3/b/3bec32ad559dac9799214970dcb27c0d964c0a7f
 [
 +src/main/java/pago/events/FacturaVista.java,9/a/9a561cf0d8001019cbc05d184bcd6cdfa3a1f33d
 ]
@@ -47,8 +45,6 @@ j
 0src/main/java/registroCompra/values/OrdenId.java,c/c/ccd9a634ebc382dc35dbe4c52880fa8cb79973a7
 c
 3src/main/java/registroCompra/values/ProductoId.java,9/a/9a54ee2501d67ec67de961eab5d4782212e015b7
-\
-,src/main/java/pago/values/Transferencia.java,5/6/564db37c7dd549da3a4d750a2fb65c72d7d962cb
 ]
 -src/main/java/cuenta/values/MetodoDePago.java,6/f/6f6368f57de345e900d7b2299a6944f66d5a8682
 X
@@ -95,8 +91,6 @@ Z
 *src/main/java/registroCompra/Producto.java,4/5/453662f3ee6051dfb2da97c586abf5af970b35f0
 W
 'src/main/java/registroCompra/Orden.java,f/8/f86bc3b0caf52b09acf473c34bb6f9c9ba685e76
-f
-6src/main/java/registroCompra/RegistroCompraChange.java,4/1/41e560b7d7f0d13f6e099aca06f94d81065ee92d
 `
 0src/main/java/compra/events/AnuncioCambiado.java,7/4/742c9a5bdd611423b9d7df1d8810a585357576a5
 _
@@ -111,5 +105,3 @@ V
 &src/main/java/cuenta/CuentaChange.java,6/1/610d8db7cb7bc5230269190fe595f80ad93c318a
 i
 9src/main/java/registroCompra/events/ProductoAgregado.java,7/1/71ae1911f5fb449249794a99975a845154b1991c
-f
-6src/main/java/registroCompra/events/OrdenAgregada.java,b/4/b442cdd9e743fbf9423da45f27f0edfb2cafb910

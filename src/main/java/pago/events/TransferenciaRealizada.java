@@ -21,4 +21,12 @@ public class TransferenciaRealizada extends DomainEvent {
     public void setTransferencia(Transferencia transferencia) {
         this.transferencia = transferencia;
     }
+
+    public Factura getFactura() {
+        return this.factura;
+    }
+
+    public Transferencia getTransferencia() {
+        return this.transferencia;
+    }
 }
