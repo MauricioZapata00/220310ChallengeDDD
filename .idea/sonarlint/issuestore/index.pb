@@ -7,10 +7,6 @@ a
 +src/main/java/pago/events/FacturaVista.java,9/a/9a561cf0d8001019cbc05d184bcd6cdfa3a1f33d
 e
 5src/main/java/cuenta/events/MetodoDePagoAsociado.java,d/0/d02a519b0d6b847ceb6efcf51ed10158c4a5619f
-\
-,src/main/java/compra/events/CompraHecha.java,a/4/a4ad57e92bd626ee94f376b870a76f3d15801bd9
-i
-9src/main/java/registroCompra/events/RegistroAgregado.java,f/f/ff88d2e5c8dea4a077e45632f977b4d2f9c269e5
 U
 %src/main/java/pago/values/PagoId.java,2/9/299ef3a99db9971f5de7833ea6eb6cdf0d503ade
 \
@@ -39,16 +35,10 @@ c
 3src/main/java/registroCompra/values/ProductoId.java,9/a/9a54ee2501d67ec67de961eab5d4782212e015b7
 ]
 -src/main/java/cuenta/values/MetodoDePago.java,6/f/6f6368f57de345e900d7b2299a6944f66d5a8682
-X
-(src/main/java/compra/values/Cookies.java,e/4/e47485851060583212908f4601d817c5da9af156
 Z
 *src/main/java/compra/values/Descuento.java,0/a/0afc10bc473c49eaedf95a86a195f59c6a674c73
 Z
 *src/main/java/compra/values/Promocion.java,1/f/1f2374a54713829aaf13ba434ab2dc00d37c0b5c
-[
-+src/main/java/compra/values/Publicidad.java,0/0/00812249c8f7b8353ba4817d3ce1b154d5b1ea84
-U
-%src/main/java/compra/Descripcion.java,a/0/a08f0d4defaf77d0eea6e65b5e7c6646d42d74d1
 V
 &src/main/java/pago/values/Factura.java,f/e/fe4652b604bc7056cb46377f2c6dc7fdfcfc8198
 d
@@ -71,14 +61,10 @@ a
 1src/main/java/registroCompra/CostoInventario.java,b/c/bcd98fe492e899b30b669436374ed6c08db31879
 R
 "src/main/java/pago/PagoChange.java,6/0/60591aaae357fb61de0b808d15e5434ba368085a
-P
- src/main/java/compra/Oferta.java,8/a/8a8338da23116f77c7b2fdebe0a75ee15f64d73f
 Z
 *src/main/java/registroCompra/Producto.java,4/5/453662f3ee6051dfb2da97c586abf5af970b35f0
 W
 'src/main/java/registroCompra/Orden.java,f/8/f86bc3b0caf52b09acf473c34bb6f9c9ba685e76
-`
-0src/main/java/compra/events/AnuncioCambiado.java,7/4/742c9a5bdd611423b9d7df1d8810a585357576a5
 _
 /src/main/java/compra/events/OfertaObtenida.java,d/a/dadd5d03ec9f9c8962bf99ae11e3b64448a3ee54
 b
@@ -101,14 +87,6 @@ f
 .src/main/java/cuenta/commands/CrearCuenta.java,d/5/d539f0003e33dc03a3fc0477b170ce40bbe6db5f
 ^
 .src/main/java/compra/commands/CrearCompra.java,5/8/5824c8ae5ea23cfcbc4af50ef4deae69756fb0f5
-j
-:src/main/java/compra/commands/CrearAnuncioRelacionado.java,f/d/fd681e5ec021b5f94c08dbd2762be50a593b5617
-\
-,src/main/java/compra/AnuncioRelacionado.java,3/8/38c7abb1ce1cf6621f553e396d4e74a674f3c29e
-`
-0src/main/java/compra/commands/ObtenerOferta.java,4/f/4fb02261eb74a13a40fa1b5608db6e57702d7a9b
-a
-1src/main/java/compra/commands/CambiarAnuncio.java,3/6/36e2d91b62177e4baf0425125bdc14cee76286f8
 n
 >src/main/java/registroCompra/commands/CrearRegistroCompra.java,2/e/2e2cc8ab0b75474f837a2b43494eb2908bed1baf
 j
@@ -125,9 +103,5 @@ Z
 *src/main/java/pago/commands/CrearPago.java,9/8/987ba5a7068ae2ab1e09ff9c2c5646929f96ead7
 e
 5src/main/java/pago/events/TransferenciaRealizada.java,3/b/3bec32ad559dac9799214970dcb27c0d964c0a7f
-`
-0src/main/java/registroCompra/RegistroCompra.java,6/0/603d4e040c8e3acc35aad115dfe2cf8c3c8d9220
-P
- src/main/java/compra/Compra.java,a/2/a2e8d51f64f4b772611fcd87cde0c3a4ec15888d
 [
 +src/main/java/pago/commands/VerFactura.java,2/e/2ef3e05323f99dbb4e46726c3a9873337befbffc

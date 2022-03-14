@@ -8,6 +8,7 @@ import cuenta.values.NombreId;
 
 public class NombreCambiado extends DomainEvent {
 
+
     private Nombre nombre;
     public NombreCambiado(CuentaId entityId, NombreId nombreId, String nombre) {
         super("cliente.cuenta.nombrecambiado");

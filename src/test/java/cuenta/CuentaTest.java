@@ -44,10 +44,10 @@ public class CuentaTest {
         Direccion direccion = new Direccion(direccionId, "Calle 10 # 18 - 20");
         Email email = new Email(emailId, "pepito@gmail.com");
         CrearCuenta crearCuenta = new CrearCuenta(cuentaId, nombre, direccion, email);
+        CrearCuentaUseCase crearCuentaUseCase = new CrearCuentaUseCase();
 
         //Act
 
-        CrearCuentaUseCase crearCuentaUseCase = new CrearCuentaUseCase();
         var events = UseCaseHandler.getInstance()
                 .syncExecutor(crearCuentaUseCase, new RequestCommand<>(crearCuenta))
                 .orElseThrow()
@@ -63,19 +63,25 @@ public class CuentaTest {
         Assert.assertEquals(email, event.getEmail());
     }
 
-    /*
+
     @Test
     public void cambiarNombre(){
         //Arrange
 
         Random aleatorio = new SecureRandom();//Just to generate random values
-        CuentaId cuentaId = CuentaId.of(aleatorio.nextLong());
-        NombreId nombreId = NombreId.of(aleatorio.nextLong());
+        //Long long1 = new Long(147896523);
+        Long long1 = Long.valueOf(147896523);
+        Long long2 = Long.valueOf(147852369);
+        CuentaId cuentaId = CuentaId.of(long1);
+        NombreId nombreId = NombreId.of(long2);
         String nombreACambiar = "Jaimito";
+
         CambiarNombre cambiarNombre = new CambiarNombre(cuentaId, nombreId, nombreACambiar);
         CambiarNombreCuentaUseCase cambiarNombreCuentaUseCase = new CambiarNombreCuentaUseCase();
-        Mockito.when(repository.getEventsBy(String.valueOf(cuentaId))).thenReturn(history());
+        System.out.println(cuentaId.value());
+        Mockito.when(repository.getEventsBy(cuentaId.toString())).thenReturn(history());
         cambiarNombreCuentaUseCase.addRepository(repository);
+
         //Act
 
         var events = UseCaseHandler.getInstance()
@@ -90,18 +96,22 @@ public class CuentaTest {
         Assert.assertEquals("cliente.cuenta.nombrecambiado", event.type);
         Assert.assertEquals(cambiarNombre.getNombre(), event.getNombre().getNombre());
     }
-    */
-     
+
+
 
     private List<DomainEvent> history() {
         Random aleatorio = new SecureRandom();//Just to generate random values
-        CuentaId cuentaId = CuentaId.of(aleatorio.nextLong());
-        NombreId nombreId = NombreId.of(aleatorio.nextLong());
+        Long long1 = Long.valueOf(147896523);
+        Long long2 = Long.valueOf(147852369);
+        //CuentaId cuentaId = CuentaId.of(aleatorio.nextLong());
+        CuentaId cuentaId = CuentaId.of(long1);
+        //NombreId nombreId = NombreId.of(aleatorio.nextLong());
+        NombreId nombreId = NombreId.of(long2);
         DireccionId direccionId = DireccionId.of(aleatorio.nextLong());
         EmailId emailId = EmailId.of(aleatorio.nextLong());
         Nombre nombre = new Nombre(cuentaId, nombreId, "Pepito");
         Direccion direccion = new Direccion(direccionId, "Calle 10 # 18 - 20");
         Email email = new Email(emailId, "pepito@gmail.com");
-        return List.of(new CuentaCreada(nombre, direccion, email));
+        return List.of(new CuentaCreada(cuentaId, nombre, direccion, email));
     }
 }

@@ -23,7 +23,7 @@ public class Cuenta extends AggregateEvent<CuentaId> {
 
     public Cuenta(CuentaId entityId, Nombre nombre, Direccion direccion, Email email) {
         super(entityId);
-        appendChange(new CuentaCreada(nombre, direccion, email)).apply();
+        appendChange(new CuentaCreada(entityId, nombre, direccion, email)).apply();
     }
 
     private Cuenta(CuentaId entityId){
